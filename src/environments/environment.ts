@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
 
-  articles_url: '../mock/produits_mock.json'
+  articles_url: '/assets/mock/produits_mock.json'
 };
 
 /*

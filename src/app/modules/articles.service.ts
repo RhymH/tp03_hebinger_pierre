@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
-import { ArticlesInterface } from "./articles-interface";
+import { Articles } from "./articles-interface";
+import { Observable} from "rxjs";
 
 
 @Injectable({
@@ -9,15 +10,10 @@ import { ArticlesInterface } from "./articles-interface";
 })
 export class ArticlesService {
 
-  articles : ArticlesInterface;
-
   constructor(private http: HttpClient) {  }
 
-  getData() {
-    this.http.get(environment.articles_url).subscribe(res => {
-      //this.articles = res;
-      console.log("res");
-    });
+  public getArticles () : Observable<Articles[]> {
+    return this.http.get<Articles[]>(environment.articles_url);
   }
 
 }

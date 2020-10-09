@@ -5,9 +5,9 @@ import { AppComponent } from './app.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
 import { FooterComponent } from './footer/footer.component';
 import { TetiereComponent } from './tetiere/tetiere.component';
-import { TableComponent } from './catalogue/table/table.component';
-import { RechercheComponent } from './catalogue/recherche/recherche.component';
 import { HttpClientModule } from "@angular/common/http";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+
 
 @NgModule({
   declarations: [
@@ -15,12 +15,12 @@ import { HttpClientModule } from "@angular/common/http";
     FooterComponent,
     TetiereComponent,
     CatalogueComponent,
-    TableComponent,
-    RechercheComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

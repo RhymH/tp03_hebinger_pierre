@@ -1,11 +1,5 @@
-export interface ArticlesInterface {
 
-  articles : ArticleInterface[];
-
-}
-
-
-export interface ArticleInterface {
+export interface Articles {
 
   nom : string;
   categorie: string;
